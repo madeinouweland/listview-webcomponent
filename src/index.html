@@ -1,0 +1,26 @@
+  <body>
+    <script src="listview.js"></script>
+    <list-view id="lv"></list-view>
+    <button id="add">Add dave</button>
+    <script type="module">
+      import {ItemsSource} from "./itemssource.js"
+      import {Employee} from "./employee.js"
+
+      const itemsSource = new ItemsSource();
+      lv.itemsSource = itemsSource;
+      lv.listItemFactory = (employee) => {
+        const li = document.createElement('li');
+        li.innerHTML = `name: ${employee.name}, salary: ${employee.salary}`;
+        return li;
+      };
+
+      itemsSource.update([
+        new Employee("vera", Math.floor(Math.random() * 9999)),
+        new Employee("chuck", Math.floor(Math.random() * 9999))
+      ]);
+
+      document.getElementById("add").addEventListener('click', () => {
+        itemsSource.add(new Employee("dave", Math.floor(Math.random() * 9999)));
+      });
+    </script>
+  </body>
