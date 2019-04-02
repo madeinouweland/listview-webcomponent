@@ -2,6 +2,8 @@
 
 ![list](https://github.com/madeinouweland/listview-webcomponent/blob/master/list.gif)
 
+### Usage
+
 ```
 <list-view id="employeesListView"></list-view>
 
@@ -15,7 +17,7 @@
 </script>
 ```
 
-This example shows how to create a webcomponent that renders a listview with UL and LI elements. The example has 4 parts:
+This repository shows a webcomponent that renders a listview with UL and LI elements. The code has 4 parts:
 
 ### employee.js
 
