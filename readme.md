@@ -3,7 +3,16 @@
 ![list](https://github.com/madeinouweland/listview-webcomponent/blob/master/list.gif)
 
 ```
-<list-view id="lv"></list-view>
+<list-view id="employeesListView"></list-view>
+
+<script type="module">
+  const itemsSource = new ItemsSource();
+  employeesListView.itemsSource = itemsSource;
+  itemsSource.update([
+    new Employee("vera", Math.floor(Math.random() * 9999)),
+    new Employee("chuck", Math.floor(Math.random() * 9999))
+  ]);
+</script>
 ```
 
 This example shows how to create a webcomponent that renders a listview with UL and LI elements. The example has 4 parts:
