@@ -1,5 +1,11 @@
 ## Listview webcomponent
 
+![list](https://github.com/madeinouweland/listview-webcomponent/blob/master/list.gif)
+
+```
+<list-view id="lv"></list-view>
+```
+
 This example shows how to create a webcomponent that renders a listview with UL and LI elements. The example has 4 parts:
 
 ### employee.js
